@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="capa-imagem">
+    <img src="{% static 'acomodacoes/images/foto3.jpg'%}" class="d-block w-100" width="500" height="600" />
+</div>
+<!-- Menu Lateral -->
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-md-2">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link nav-header" aria-current="page" href="#">Acomodações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/detalhe/1/">Chalés</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Apartamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Restaurante</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Depoimentos</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <h2>Faça sua reserva</h2>
+            <div class="row" style="min-width:fit-content ;">
+                {% for acomodacao in acomodacoes %}
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{% static 'acomodacoes/images/chalequad.jpeg'%}" class="card-img-top"
+                            alt="card-img-cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{acomodacao.tipo}}</h5>
+                            <div class="text-center">
+                                <p class="card-text">{{acomodacao.descricao}}</p>
+                                <div class="text-center">
+                                    <p class="text-money">{{acomodacao.valor}}</p>
+                                    <a href="#" class="btn btn-primary">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- /Menu Lateral -->
+    {%endblock %}
