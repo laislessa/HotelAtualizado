@@ -36,6 +36,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Localização</a>
                             </li>
+                            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                                <li>
+                                    <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Olá, faça seu login <br>
+                                        ou cadastre-se
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-signin">
+                                        <li><a class="dropdown-item" href="{% url 'clientes:login' %}">Entrar</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'clientes:criar_cliente' %}">Criar Conta</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
