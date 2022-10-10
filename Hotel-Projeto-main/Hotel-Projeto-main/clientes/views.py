@@ -16,7 +16,7 @@ def criar_cliente(request):
         usuario.set_password(password)
         usuario.save()
         ##print(f'{email} - {password}')
-    return render(request, 'criar_cliente.html')
+    return render(request, 'criar_clientes.html')
 
 
 def login_user(request):
