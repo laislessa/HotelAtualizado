@@ -1,25 +1,28 @@
+import re
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib.auth import get_user_model, authenticate, login, logout
+from django.contrib import messages
 
 
 def criar_cliente(request):
-    def criar_cliente(request):
-        if request.method == 'POST':
-            email = request.POST.get('email')
-            password = request.POST.get('password')
-            user = get_user_model()
-            usuario = user(
-            email=email,
-            password=password
-        )
+    if request.method == 'POST':
+        usuario = request.POST.get('usuario')
+        password = request.POST.get('password')
+        user = get_user_model()
+        usuario = user(
+        username=usuario,
+        password=password
+    )
         usuario.set_password(password)
         usuario.save()
-        ##print(f'{email} - {password}')
+        messages.success(request, 'Usuario criado com sucesso')
+    ##print(f'{email} - {password}')
     return render(request, 'criar_clientes.html')
 
 
 def login_user(request):
+    messages.success(request,'usuario logado')
     return render(request, 'login.html')
 
 
