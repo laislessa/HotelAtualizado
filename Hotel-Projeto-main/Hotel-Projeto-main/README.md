@@ -7,15 +7,24 @@ password: laisl
 
 
 Obs: 
-Problemas no detalhar acomodação não está funcionando.
-Mensagem de cadastro/login/erro
+<!-- Problemas no detalhar acomodação não está funcionando. -->
+<!-- 
+Mensagem de cadastro/login/erro -->
 
-Falta direcionar login do cliente para pagina de inicial. 
+<!-- Falta direcionar login do cliente para pagina de inicial.  -->
+<!-- 
+autenticação do cliente: existe ou nao -->
 
-autenticação do cliente: existe ou nao
+<!-- Carregar fotos no site, colocadas no django admin
+- Listar_acomodacoes.html imagem está estatica -->
 
-Carregar fotos no site, colocadas no django admin
-- Listar_acomodacoes.html imagem está estatica
+
+
+
+
+
+
+
 
 Criar formulario de reserva c calendario
 

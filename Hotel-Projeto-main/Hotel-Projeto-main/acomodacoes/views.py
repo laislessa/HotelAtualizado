@@ -12,5 +12,5 @@ def listar_acomodacoes(request):
 
 
 def detalhe(request, acomodacao_id):
-    acomodacoes = TipoAcomodacao.objects.get(pk=acomodacao_id)
-    return render(request,'detalhe.html',{'acomodacao': acomodacoes[acomodacao_id]})
+    acomodacao = TipoAcomodacao.objects.get(pk=acomodacao_id)
+    return render(request,'detalhe.html',{'acomodacao': acomodacao})

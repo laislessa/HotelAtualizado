@@ -10,13 +10,13 @@
         <div class="col-md-2">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link nav-header" aria-current="page" href="#">Acomodações</a>
+                    <a class="nav-link nav-header" aria-current="page" href="http://127.0.0.1:8000/#">Acomodações</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/detalhe/1/">Chalés</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Apartamentos</a>
+                    <a class="nav-link" href="http://127.0.0.1:8000/detalhe/2/">Apartamentos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Restaurante</a>
@@ -27,9 +27,10 @@
             </ul>
         </div>
         <div class="col-md-10">
-            <h2>Chalés</h2>
-            <p class="lead">Chalés com 35 metros², equipados com televisão, ar-condicionado, frigobar. Vista
-                para o mar. </p>
+            <h1> {{ acomodacao }} </h1>
+            <h3>{{acomodacao.descricao}}</h3>
+            <h4>Valor: {{acomodacao.valor}} reais</h4>
+        
             <div class="container text-center">
                 <div class="row align-items-start">
                     <div class="col">
